@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "sl-datatable": [
+        "dist/sl-datatable"
+      ],
+      "sl-datatable/*": [
+        "dist/sl-datatable/*"
+      ]
+    }
   }
 }

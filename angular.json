@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "sl-datatable": {
+      "root": "projects/sl-datatable",
+      "sourceRoot": "projects/sl-datatable/src",
+      "projectType": "library",
+      "prefix": "sl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/sl-datatable/tsconfig.lib.json",
+            "project": "projects/sl-datatable/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sl-datatable/src/test.ts",
+            "tsConfig": "projects/sl-datatable/tsconfig.spec.json",
+            "karmaConfig": "projects/sl-datatable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sl-datatable/tsconfig.lib.json",
+              "projects/sl-datatable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "sl-datatable-app"
